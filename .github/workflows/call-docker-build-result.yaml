@@ -52,8 +52,8 @@ jobs:
       ### defaults to:
       image-names: |
         ghcr.io/scagroup6/example-voting-app-result
-        faitholaoniye/examplevotingapp_result
-      
+        faitholaoniye/shedeploys-result
+
       ### REQUIRED set rules for tagging images, based on special action syntax:
       ### https://github.com/docker/metadata-action#tags-input
       ### defaults to:
