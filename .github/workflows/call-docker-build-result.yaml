@@ -45,7 +45,7 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           tags: |
-            faitholaoniye/shedeploys-result:latest
+            paranormalrave/shedeploys-result:latest
             ghcr.io/scagroup6/example-voting-app-result:latest
       
       ### Create a PR comment with image tags and labels
