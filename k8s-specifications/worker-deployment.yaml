@@ -15,10 +15,7 @@ spec:
         app: worker
     spec:
       containers:
-<<<<<<< HEAD
       - image: worker
         imagePullPolicy: Never
-=======
-      - image: SCAGroup6/examplevotingapp_worker
->>>>>>> 88653ebfca8783bdcffe492fbfb9d27dc614a762
+      dev
         name: worker

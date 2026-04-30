@@ -15,12 +15,9 @@ spec:
         app: result
     spec:
       containers:
-<<<<<<< HEAD
       - image: result
         imagePullPolicy: Never
-=======
-      - image: SCAGroup6/examplevotingapp_result
->>>>>>> 88653ebfca8783bdcffe492fbfb9d27dc614a762
+      dev
         name: result
         ports:
         - containerPort: 80
