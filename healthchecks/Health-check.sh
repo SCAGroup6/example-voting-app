@@ -33,13 +33,14 @@ echo " " #this is used for spacing
 healthChecks(){
     echo "THE HEALTH CHECKS FOR EACH CONTAINER......"
     for container_id in $(docker compose ps -q); do
-        read name status <<< $(docker inspect --format='{{.Name}} {{.State.Health.Status}}' $container_id) #This is used to iterate and check the health status of each container showing the name and container
+        info=$(docker inspect --format='{{.Name}} {{if .State.Health}}{{.State.Health.Status}}{{else}}none{{end}}' $container_id)
+        read name status <<< "$info" #This is used to iterate and check the health status of each container showing the name and container
         if [ "$status" == "healthy" ]; then 
             echo "THE CONTAINER $name ($container_id) is healthy"
         elif [ "$status" == "unhealthy" ]; then
             echo "THE CONTAINER $name ($container_id) is unhealthy"
-        elif [ -z "$status" ]; then #This is used to check if the container health status is empty 
-            echo "THE CONTAINER $name ($container_id) is empty"
+        else #This is used to check if the container health status is empty 
+            echo "THE CONTAINER $name ($container_id) has no health checks"
 
         fi
     done
