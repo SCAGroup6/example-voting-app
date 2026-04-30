@@ -15,8 +15,12 @@ spec:
         app: vote
     spec:
       containers:
+<<<<<<< HEAD
       - image: vote
         imagePullPolicy: Never
+=======
+      - image: SCAGroup6/examplevotingapp_vote
+>>>>>>> 88653ebfca8783bdcffe492fbfb9d27dc614a762
         name: vote
         ports:
         - containerPort: 80
