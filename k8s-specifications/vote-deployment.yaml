@@ -15,9 +15,8 @@ spec:
         app: vote
     spec:
       containers:
-      - image: vote
+      - image: example-voting-app-vote:latest 
         imagePullPolicy: Never
-       dev
         name: vote
         ports:
         - containerPort: 80

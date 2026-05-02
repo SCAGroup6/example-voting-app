@@ -15,7 +15,6 @@ spec:
         app: worker
     spec:
       containers:
-      - image: worker
+      - image: example-voting-app-worker:latest
         imagePullPolicy: Never
-      dev
         name: worker

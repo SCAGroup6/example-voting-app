@@ -10,6 +10,8 @@ from datetime import datetime, timezone
 hostname = socket.gethostname()
 
 app = Flask(__name__)
+from prometheus_flask_exporter import PrometheusMetrics
+metrics = PrometheusMetrics(app)
 
 gunicorn_error_logger = logging.getLogger('gunicorn.error')
 app.logger.handlers.extend(gunicorn_error_logger.handlers)
